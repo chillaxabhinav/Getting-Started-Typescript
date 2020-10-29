@@ -57,4 +57,32 @@ enum Check {FIRST = "First",SECOND = "Second", THIRD = "Third"};
 
 enum AnotherVariant {var = 4, second = 9 , third};
 
-console.log(Check.FIRST);
+// console.log(Check.FIRST);
+
+let unknownType : unknown;
+
+unknownType = 10;
+
+let numberType : number;
+//numberType = unknownType; // Not possible
+
+if(typeof unknownType === 'number'){ // Have to do type check for 100% guarantee that unknown is actually a number type
+    numberType = unknownType;
+}
+
+// But if we place unknown to any then type checking will not take place then we can assign that
+
+function generateError(message : string) : never {
+    throw {message : message};
+}
+
+function generateErrorVoid(message : string) : void {
+    try {
+        throw {message : message};
+    }
+    catch(e){
+        console.log(e);
+    }
+}
+
+generateErrorVoid("This function never returns and crashes the code hence never type otherwise void would do the work");
