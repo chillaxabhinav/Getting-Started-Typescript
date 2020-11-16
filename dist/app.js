@@ -1,3 +1,4 @@
+"use strict";
 function add(n1, n2, showResult, resultPhrase) {
     if (showResult) {
         console.log(resultPhrase + " " + (n1 + n2));
@@ -63,3 +64,4 @@ function generateErrorVoid(message) {
     }
 }
 generateErrorVoid("This function never returns and crashes the code hence never type otherwise void would do the work");
+var my = 10;

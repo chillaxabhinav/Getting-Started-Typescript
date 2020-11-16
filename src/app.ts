@@ -86,3 +86,5 @@ function generateErrorVoid(message : string) : void {
 }
 
 generateErrorVoid("This function never returns and crashes the code hence never type otherwise void would do the work");
+
+let my = 10;
